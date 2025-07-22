@@ -19,10 +19,10 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(scale = 12 ,precision = 2)
+    @Column(precision = 12 ,scale = 2)
     private BigDecimal number;
 
-    @Column(name = "available_limit", scale = 12 ,precision = 2)
+    @Column(name = "available_limit", precision = 12 ,scale = 2)
     private BigDecimal limit;
 
 }
