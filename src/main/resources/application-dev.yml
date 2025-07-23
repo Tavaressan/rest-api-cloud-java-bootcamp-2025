@@ -1,20 +1,16 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:sdw2025
-    username: sdw2025
-    password:
+    # Aponta para o túnel do Railway que está rodando em localhost
+    url: jdbc:postgresql://localhost:5432/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
   jpa:
-    show-sql: true
-    open-in-view: false
     hibernate:
-      ddl-auto: create # validate | update | create | create-drop
+      # 'update' é seguro para desenvolvimento, pois não apaga dados existentes.
+      ddl-auto: create
     properties:
       hibernate:
-        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   h2:
     console:
-      enabled: true
-      path: /h2-console
-      settings:
-        trace: false
-        web-allow-others: false
+      enabled: false # Desabilitar o console do H2 quando não estiver em uso

@@ -19,8 +19,8 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(precision = 12 ,scale = 2)
-    private BigDecimal number;
+
+    private String number;
 
     @Column(name = "available_limit", precision = 12 ,scale = 2)
     private BigDecimal limit;
