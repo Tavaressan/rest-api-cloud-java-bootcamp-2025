@@ -7,7 +7,7 @@ spring:
   jpa:
     hibernate:
       # 'update' é seguro para desenvolvimento, pois não apaga dados existentes.
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
