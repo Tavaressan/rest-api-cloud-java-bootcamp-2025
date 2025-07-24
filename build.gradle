@@ -36,6 +36,12 @@ dependencies {
 	//implementation 'org.flywaydb:flyway-core'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "me.dio.domain.Application"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }

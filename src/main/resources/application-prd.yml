@@ -6,10 +6,4 @@ spring:
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: create
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#  h2:
-#    console:
-#      enabled: false
+      ddl-auto: validate

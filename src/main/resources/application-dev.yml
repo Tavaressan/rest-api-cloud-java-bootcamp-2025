@@ -8,9 +8,3 @@ spring:
     hibernate:
       # 'update' é seguro para desenvolvimento, pois não apaga dados existentes.
       ddl-auto: update
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#  h2:
-#    console:
-#      enabled: false # Desabilitar o console do H2 quando não estiver em uso
